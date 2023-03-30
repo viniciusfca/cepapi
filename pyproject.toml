@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cepapi"
-version = "v1.0.1"
+version = "v1.0.2"
 description = "Python Search CEP API."
 authors = ["Vinicius de Souza <vinicius_fca@hotmail.com>"]
 readme = "README.md"
