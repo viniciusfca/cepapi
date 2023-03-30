@@ -1,19 +1,12 @@
 name: CD
 on:
   push:
-    branches: [main]
+    tags: 
+      - '*'
 jobs:
   build:
-    name: Build
+    name: Update Version and Build
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
-
-      - name: build image and push to docker hub
-        uses: docker/build-push-action@v1.1.0
-        with:
-          username: viniciusfca
-          password: ${{secrets.DOCKER_PASSWORD}}
-          repository: viniciusfca/cepapi
-          tags: lastest
+      - name: update version and build
+        uses: viniciusfca/templateAction@main
