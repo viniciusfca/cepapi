@@ -13,4 +13,4 @@ jobs:
         with:
           username: viniciusfca
           password: ${{secrets.DOCKER_PASSWORD}}
-          tag: $GITHUB_RUN_NUMBER
+          tag: ${{ github.ref }}
