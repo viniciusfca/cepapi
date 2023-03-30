@@ -10,3 +10,8 @@ jobs:
     steps:
       - name: update version and build
         uses: viniciusfca/templateAction@main
+        with:
+          username: viniciusfca
+          password: ${{secrets.DOCKER_PASSWORD}}
+          repository: viniciusfca/cepapi
+          tags: ${{ github.ref }}, lastest
