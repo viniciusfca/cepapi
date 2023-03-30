@@ -14,4 +14,4 @@ jobs:
           username: viniciusfca
           password: ${{secrets.DOCKER_PASSWORD}}
           repository: viniciusfca/cepapi
-          tags: ${{ github.ref }}, lastest
+          tag: ${{ github.ref }}, lastest
