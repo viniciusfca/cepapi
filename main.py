@@ -6,7 +6,8 @@ app = FastAPI()
 cache = TTLCache(maxsize=100, ttl=300)
 
 @app.get("/cep/{cep}")
-async def get_address(cep: str):
+async def get_address(cep: str, request: Request):
+    print(request.headers)
     if cep in cache:
         return cache[cep]
     else:
@@ -15,7 +16,7 @@ async def get_address(cep: str):
         address_data = response.json()
         cache[cep] = address_data
         return address_data
-    
+
 
 if __name__ == '__main__':
     import uvicorn
