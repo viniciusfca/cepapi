@@ -1,5 +1,5 @@
 import requests
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from cachetools import TTLCache
 
 app = FastAPI()
